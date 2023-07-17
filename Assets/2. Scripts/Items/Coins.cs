@@ -13,6 +13,7 @@ public class Coins : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Money.instance.MoneyCollect(cashToGive);
+            AudioManager.instance.PlayAudio(AudioManager.instance.gems);
             Destroy(gameObject);
         }
     }
