@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SubItems : MonoBehaviour
+public class Hearts : MonoBehaviour
 {
-    public Text subItemsText;
-    public int subItemsAmount;
+    public Text HeartsText;
+    public int HeartsAmount;
 
-    public static SubItems instance;
+    public static Hearts instance;
 
     private void Awake()
     {
@@ -20,13 +20,13 @@ public class SubItems : MonoBehaviour
 
     private void Start()
     {
-        subItemsText.text = "x " + subItemsAmount.ToString();
+        HeartsText.text = "x " + HeartsAmount.ToString();
     }
 
     public void SubItem(int subItemsAmount)
     {
-        subItemsAmount += subItemsAmount;
-        subItemsText.text = "x " + subItemsAmount.ToString();
+        HeartsAmount += subItemsAmount;
+        HeartsText.text = "x " + HeartsAmount.ToString();
     }
 
 }

@@ -11,7 +11,7 @@ public class Collectable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SubItems.instance.SubItem(swordsToGive);
+            Hearts.instance.SubItem(swordsToGive);
             Destroy(gameObject);
         }
     }
